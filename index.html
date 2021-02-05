@@ -2,14 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
-    <title>Hello, World!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Oswald&display=swap" />
+    <script src="https://kit.fontawesome.com/c4c88f01de.js" crossorigin="anonymous"></script>
+    <title>Muhammad Khan</title>
 </head>
 <body>
+    <header>
+        <nav id="navbar">
+            <ul>
+                <a class="nav-link" href="#about">
+                    <li>About</li>
+                </a>
+                <a class="nav-link" href="#portfolio">
+                    <li>Portfolio</li>
+                </a>
+                <a class="nav-link" href="#contacts">
+                    <li>Contacts</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
     <main>
         <h1>Muhammad Khan, Full-Stack and Android Developer</h1>
-
-        <section id="bio">
+        <section id="about">
             <h2>About me</h2>
             <img alt="My photo" src="muhammad.jpeg" />
             <p>
@@ -40,7 +57,6 @@
                 willing to go the extra mile to make my mark on the programming world.
             </p>
         </section>
-
         <section id="portfolio">
             <h2>Portfolio</h2>
             <img alt="Virtual Piano Screenshot" src="virtual-piano.png" />
@@ -53,5 +69,43 @@
             <h3>Survey Form</h3>
         </section>
     </main>
+    <footer>
+        <section id="contacts">
+            <p>Contact me or just check out my work</p>
+            <ul>
+                <a class="foot-link" id="profile-link" href="https://github.com/MBM1607" target="_blank">
+                    <li>
+                        <i class="fab fa-github"></i>
+                        Github
+                    </li>
+                </a>
+                <a class="foot-link" href="https://bitbucket.org/%7Bccc3bbeb-8edc-41e7-933e-dd6413a14863%7D/"
+                   target="_blank">
+                    <li>
+                        <i class="fab fa-bitbucket"></i>
+                        Bitbucket
+                    </li>
+                </a>
+                <a class="foot-link" href="https://py.checkio.org/user/MBM_1607/" target="_blank">
+                    <li>
+                        <i class="fab fa-python"></i>
+                        Checkio
+                    </li>
+                </a>
+                <a class="foot-link" href="https://www.freecodecamp.org/mbm_1607" target="_blank">
+                    <li>
+                        <i class="fab fa-free-code-camp"></i>
+                        FreeCodeCamp
+                    </li>
+                </a>
+                <a class="foot-link" href="mailto:MuhammadKhan1607@gmail.com" target="_blank">
+                    <li>
+                        <i class="far fa-envelope"></i>
+                        Send me a mail
+                    </li>
+                </a>
+            </ul>
+        </section>
+    </footer>
 </body>
 </html>
