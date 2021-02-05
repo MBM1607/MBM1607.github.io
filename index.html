@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Oswald&display=swap" />
     <script src="https://kit.fontawesome.com/c4c88f01de.js" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
     <title>Muhammad Khan</title>
 </head>
 <body>
@@ -67,19 +68,23 @@
             <div class="project-container">
                 <section class="project">
                     <h3>Virtual Piano</h3>
-                    <a><img alt="Virtual Piano Screenshot" src="virtual-piano.png" /></a>
+                    <img alt="Virtual Piano Screenshot" src="virtual-piano.png"
+                         data-window-target="piano" class="open-window"/>
                 </section>
                 <section class="project">
                     <h3>Flashcards</h3>
-                    <a><img alt="Flashcards Screenshot" src="flashcards.png" /></a>
+                    <img alt="Flashcards Screenshot" src="flashcards.png"
+                         data-window-target="flashcards" class="open-window"/>
                 </section>
                 <section class="project">
                     <h3>Technical Documentation</h3>
-                    <a><img alt="Technical Documentation Screenshot" src="technical-documentation.png" /></a>
+                    <img alt="Technical Documentation Screenshot" src="technical-documentation.png"
+                         data-window-target="documentation" class="open-window"/>
                 </section>
                 <section class="project">
                     <h3>Survey Form</h3>
-                    <a><img alt="Survey Form Screenshot" src="survey-form.png" /></a>
+                    <img alt="Survey Form Screenshot" src="survey-form.png"
+                         data-window-target="survey" class="open-window"/>
                 </section>
             </div>
         </section>
@@ -119,9 +124,72 @@
             </ul>
         </section>
     </main>
+    <article class="window" id="piano">
+        <h2 class="window-title">Virtual Piano</h2>
+        <p class="window-link">
+            <a href="https://github.com/MBM1607/piano" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+        </p>
+        <p class="window-link">
+            <a href="https://virtual-piano-mbm.netlify.app/" target="_blank"><i class="fas fa-globe"></i> Deployed here</a>
+        </p>
+        <p class="window-description">
+            Simple Piano web toy made with HTML, CSS and JavaScript.
+            Virtual Piano was a project made for hyperskill but has since been
+            expanded upon because I loved the idea.
+        </p>
+        <button data-close-button class="close-window">&times;</button>
+    </article>
+    <article class="window" id="flashcards">
+        <h2 class="window-title">Flashcards</h2>
+        <p class="window-link">
+            <a href="https://github.com/MBM1607/cards" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+        </p>
+        <p class="window-link">
+            <a href="https://codepen.io/MBM_1607/full/OJbMwBM" target="_blank"><i class="fas fa-globe"></i> Deployed here</a>
+        </p>
+        <p class="window-description">
+            Static, responsive flashcard web page made with HTML, CSS, and JavaScript.
+            This was the first project made for Front-end Track on Hyperskill.
+            This page shows country names on front side and
+            capital names on the back side of the card.
+        </p>
+        <button data-close-button class="close-window">&times;</button>
+    </article>
+    <article class="window" id="documentation">
+        <h2 class="window-title">Technical Documentation</h2>
+        <p class="window-link">
+            <a href="https://codepen.io/MBM_1607/pen/KKwojXd" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+        </p>
+        <p class="window-link">
+            <a href="https://codepen.io/MBM_1607/full/KKwojXd" target="_blank"><i class="fas fa-globe"></i> Deployed here</a>
+        </p>
+        <p class="window-description">
+            Static, responsive webpage made with HTML, CSS, and JavaScript.
+            This was the last project on the Responsive Web Design Certification on freeCodeCamp.
+            This is in my opinion one of my best designs.
+        </p>
+        <button data-close-button class="close-window">&times;</button>
+    </article>
+    <article class="window" id="survey">
+        <h2 class="window-title">Survey Form</h2>
+        <p class="window-link">
+            <a href="https://codepen.io/MBM_1607/pen/VwYMWpv" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+        </p>
+        <p class="window-link">
+            <a href="https://codepen.io/MBM_1607/full/VwYMWpv" target="_blank"><i class="fas fa-globe"></i> Deployed here</a>
+        </p>
+        <p class="window-description">
+            Static, responsive HTML and CSS input form.
+            This was the first webpage that I made fully myself.
+            Survey Form was one of the projects for Responsive Web Design Certification
+            on freeCodeCamp.
+        </p>
+        <button data-close-button class="close-window">&times;</button>
+    </article>
+    <div id="overlay"></div>
     <footer>
         <h3>Muhammad Khan</h3>
-        <em>© 2021</em>
+        <em>&copy 2021</em>
     </footer>
 </body>
 </html>

@@ -10,10 +10,88 @@
     --text-color: #ed2939;
 }
 
+.window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) skew(-10deg) scale(0);
+    -moz-transform: translate(-50%, -50%) skew(-10deg) scale(0);
+    -ms-transform: translate(-50%, -50%) skew(-10deg) scale(0);
+    -o-transform: translate(-50%, -50%) skew(-10deg) scale(0);
+    transform: translate(-50%, -50%) skew(-10deg) scale(0);
+    transition: transform 200ms ease-in-out;
+    background-color: var(--primary-color);
+    border: 2px solid var(--navbar-color);
+    padding: 2em;
+    display: flex;
+    flex-flow: column nowrap;
+    z-index: 10;
+}
+
+.window.active {
+    -webkit-transform: translate(-50%, -50%) skew(-15deg) scale(0);
+    -moz-transform: translate(-50%, -50%) skew(-15deg) scale(0);
+    -ms-transform: translate(-50%, -50%) skew(-15deg) scale(0);
+    -o-transform: translate(-50%, -50%) skew(-15deg) scale(0);
+    transform: translate(-50%, -50%) skew(-15deg) scale(1);
+}
+
+.window-title {
+    font-size: 2.5em;
+    margin-bottom: 0.325em;
+}
+
+.window-link {
+    font-size: 1.325em;
+    padding: 0.2em 0;
+    margin: 0.1em 0;
+}
+
+.window-link a {
+    padding: 0 0.5em;
+    background-color: var(--text-color);
+    color: var(--primary-color);
+}
+
+
+.window-description {
+    margin-top: 0.25em;
+    font-family: Lato, sans-serif;
+}
+
+button.close-window {
+    cursor: pointer;
+    margin-top: 0.5em;
+    font-size: 1.75em;
+    font-weight: bold;
+    color: var(--primary-color);
+    background-color: var(--navbar-color);
+    border: none;
+    outline: none;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
 body {
     font-family: "Oswald", sans-serif;
     text-align: center;
     color: var(--text-color);
+    background-color: var(--primary-color);
 }
 
 nav {
@@ -89,11 +167,11 @@ section#about{
 }
 
 #about > img {
-    -webkit-transform: skew(-15deg);
-    -moz-transform: skew(-15deg);
-    -ms-transform: skew(-15deg);
-    -o-transform: skew(-15deg);
-    transform: skew(-15deg);
+    -webkit-transform: skew(-10deg);
+    -moz-transform: skew(-10deg);
+    -ms-transform: skew(-10deg);
+    -o-transform: skew(-10deg);
+    transform: skew(-10deg);
     width: 15em;
     margin: 2em;
     -webkit-transition: transform 0.25s;
@@ -101,11 +179,11 @@ section#about{
 }
 
 #about > img:hover {
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    -ms-transform: skew(15deg);
-    -o-transform: skew(15deg);
-    transform: skew(15deg);
+    -webkit-transform: skew(10deg);
+    -moz-transform: skew(10deg);
+    -ms-transform: skew(10deg);
+    -o-transform: skew(10deg);
+    transform: skew(10deg);
     box-shadow: none;
 }
 
@@ -138,11 +216,11 @@ section#contacts {
 
 .foot-link {
     font-size: 1.5em;
-    -webkit-transform: skew(20deg);
-    -moz-transform: skew(20deg);
-    -ms-transform: skew(20deg);
-    -o-transform: skew(20deg);
-    transform: skew(20deg);
+    -webkit-transform: skew(-10deg);
+    -moz-transform: skew(-10deg);
+    -ms-transform: skew(-10deg);
+    -o-transform: skew(-10deg);
+    transform: skew(-10deg);
     padding: 0.25em 0.625em;
     background-color: var(--text-color);
     color: var(--primary-color);
