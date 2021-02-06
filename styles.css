@@ -106,7 +106,7 @@ nav {
 ul {
     list-style-type: none;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-evenly;
 }
 
@@ -140,7 +140,7 @@ h3 {
     color: var(--navbar-color);
 }
 
-section#welcome {
+#welcome {
     height: 100vh;
     text-align: center;
     font-family: "Lato", sans-serif;
@@ -149,15 +149,15 @@ section#welcome {
     justify-content: center;
 }
 
-section#welcome h1 {
+#welcome h1 {
     font-size: 5em;
 }
 
-section#welcome h2 {
+#welcome h2 {
     font-size: 2.25em;
 }
 
-section#about{
+#about{
     margin-bottom: 5em;
 }
 
@@ -205,7 +205,7 @@ img {
     border: 2px solid var(--navbar-color);
 }
 
-section#contacts {
+#contacts {
     height: 50vh;
     text-align: center;
     margin-top: 1.75em;
@@ -216,6 +216,7 @@ section#contacts {
 
 .foot-link {
     font-size: 1.5em;
+    margin: 0.2em 0;
     -webkit-transform: skew(-10deg);
     -moz-transform: skew(-10deg);
     -ms-transform: skew(-10deg);
@@ -237,4 +238,97 @@ footer {
 
 footer > h3 {
     font-size: 1.625em;
+}
+
+@media (max-width: 860px) {
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+    .foot-link {
+        font-size: 1.25em;
+    }
+    .window {
+        width: 80%;
+    }
+    .window-title {
+        font-size: 1.5em;
+    }
+    .window-link {
+        font-size: 1em;
+    }
+    .window-description {
+        font-size: 0.925em;
+    }
+    button.close-window {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 700px) {
+    #welcome h1 {
+        font-size: 3em;
+    }
+    #welcome h2 {
+        font-size: 1.525em;
+    }
+    .foot-link {
+        font-size: 0.925em;
+    }
+}
+
+@media (max-width: 512px) {
+    #welcome h1 {
+        font-size: 2.5em;
+    }
+    #welcome h2 {
+        font-size: 1.375em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+    h3 {
+        font-size: 1.25em;
+    }
+    #about {
+        font-size: 0.8725em;
+    }
+    #about > img {
+        width: 12em;
+    }
+    .foot-link {
+        font-size: 0.725em;
+    }
+    footer {
+        font-size: 0.725em;
+    }
+    footer > h3 {
+        font-size: 1.525em;
+    }
+    .window {
+        -webkit-transform: translate(-50%, -50%) skew(-5deg) scale(0);
+        -moz-transform: translate(-50%, -50%) skew(-5deg) scale(0);
+        -ms-transform: translate(-50%, -50%) skew(-5deg) scale(0);
+        -o-transform: translate(-50%, -50%) skew(-5deg) scale(0);
+        transform: translate(-50%, -50%) skew(-5deg) scale(0);
+    }
+    .window.active {
+        -webkit-transform: translate(-50%, -50%) skew(-5deg) scale(1);
+        -moz-transform: translate(-50%, -50%) skew(-5deg) scale(1);
+        -ms-transform: translate(-50%, -50%) skew(-5deg) scale(1);
+        -o-transform: translate(-50%, -50%) skew(-5deg) scale(1);
+        transform: translate(-50%, -50%) skew(-5deg) scale(1);
+    }
+    .window-title {
+        font-size: 1.25em;
+    }
+    .window-link {
+        font-size: 0.8725em;
+    }
+    .window-description {
+        font-size: 0.725em;
+    }
+    button.close-window {
+        font-size: 1.25em;
+    }
 }
