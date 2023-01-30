@@ -10,4 +10,5 @@ module.exports = {
   ],
   astroAllowShorthand: false,
   trailingComma: "all",
+  tabWidth: 2,
 };
