@@ -1,14 +1,12 @@
-# Personal Website
+# 🌐 Personal Website
 
 This is my personal website, built with [Astro](https://astro.build) using the theme
 [astro-portfolio](https://github.com/withastro/astro/tree/main/examples/portfolio).
 
-## Blog
+## 📝 Blog
 
 I create new pages for blog posts in the `src/pages/blog` directory.
-The blog posts are written in TypeScript and use the `BlogPost` component.
-This is the way I can use the same layout for all blog posts, using only Astro, Typescript,
-vanilla CSS and no other libraries.
+The blog posts are written using only Astro, Typescript, vanilla CSS and no other libraries.
 
 ## 🧞 Commands
 
