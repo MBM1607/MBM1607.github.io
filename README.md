@@ -1,5 +1,7 @@
 # 🌐 Personal Website
 
+[![Built with Astro](https://astro.badg.es/v1/built-with-astro.svg)](https://astro.build)
+
 This is my personal website, built with [Astro](https://astro.build) using the theme
 [astro-portfolio](https://github.com/withastro/astro/tree/main/examples/portfolio).
 

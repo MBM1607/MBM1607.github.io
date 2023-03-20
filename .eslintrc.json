@@ -4,8 +4,22 @@
     "es2021": true,
     "jest": true
   },
-  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
-  "overrides": [],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:astro/recommended"
+  ],
+  "overrides": [
+    {
+      "files": ["*.astro"],
+      "parser": "astro-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [".astro"]
+      },
+      "rules": {}
+    }
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": ["tsconfig.json"],
@@ -14,10 +28,6 @@
   },
   "plugins": ["@typescript-eslint", "unused-imports"],
   "rules": {
-    "indent": ["error", 2],
-    "linebreak-style": ["error", "unix"],
-    "quotes": ["error", "double"],
-    "semi": ["error", "always"],
     "no-console": [
       "error",
       {
@@ -25,23 +35,12 @@
       }
     ],
     "unused-imports/no-unused-imports": "error",
-    "quote-props": ["error", "as-needed"],
+    "no-unexpected-multiline": "off",
+    "no-mixed-spaces-and-tabs": "off",
+    "@typescript-eslint/no-extra-semi": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-inferrable-types": "off",
     "@typescript-eslint/no-unnecessary-type-constraint": "off",
-    "@typescript-eslint/member-delimiter-style": [
-      "error",
-      {
-        "multiline": {
-          "delimiter": "comma",
-          "requireLast": true
-        },
-        "singleline": {
-          "delimiter": "comma",
-          "requireLast": true
-        }
-      }
-    ],
     "@typescript-eslint/no-unnecessary-condition": "error",
     "no-duplicate-imports": [
       "error",
@@ -49,15 +48,7 @@
         "includeExports": true
       }
     ],
-    "object-shorthand": ["error", "always"],
-    "no-multiple-empty-lines": [
-      "error",
-      {
-        "max": 1,
-        "maxEOF": 0,
-        "maxBOF": 0
-      }
-    ]
+    "object-shorthand": ["error", "always"]
   },
   "ignorePatterns": [
     "node_modules/",
